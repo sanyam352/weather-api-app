@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+<body>
+
+  <style>
+
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    head, body{
+      height: auto;
+      width: 100%;
+    }
+
+    #main{
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      background-color: #EDF6FD;
+    }
+
+    /* LOGO SECTION */
+
+    .logo{
+      display: flex;
+      font-size: 23px;
+      margin-bottom: 15px;
+      font-weight: 500
+    }
+
+    .logo .span2, .logo i{
+      color: rgb(56, 189, 248);
+      font-weight: 500;
+    }
+
+    .logo i{
+      margin-right: 10px;
+    }
+
+    .p h6{
+      width: 100%;
+    }
+
+    /* Elegantly simple weather at your fingertips */
+
+    .p{
+      color: gray;
+      margin-bottom: 40px;
+    }
+
+    /* search bar */
+
+    .searchbar{
+      border: 0px solid;
+      border-radius: 50px;
+      padding: 10px 0;
+      display: flex;
+      width: 500px;
+      background-color: #f6fbff;
+    }
+
+    .searchbar input, i{
+      margin-left: 15px;
+      
+    }
+
+    .searchbar i{
+      color: gray;
+    cursor: pointer;    }
+
+    .searchbar input{
+      width: 90%;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .weathercontainer{
+      width: 800px;
+      height: 320px;
+      margin-top: 50px;
+      background-color: white;
+      padding: 25px 30px;
+      border-radius: 50px;
+    }
+
+    .weatherinfodiv{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .weatherinfo{
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    .weathercontainer .countryname{
+      font-size: 15px;
+    }
+
+    .weathercontainer .city{
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    .weathercontainer .weatherdescription{
+      font-size: 18px;
+    }
+
+    .weatherinfodiv .temprature{
+      font-size: 60px;
+      font-weight: 200;
+    }
+
+    .moredetails{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    }
+    
+    .humiditycont, .Windcont, .Pressurecont, .Feelslikecont{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 0px solid;
+      width: 20%;
+      padding: 20px 0px;
+      box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    @media (max-width: 400px) {
+      
+
+#main {
+  height: auto;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.p {
+    font-size: 146x;
+    text-align: center;
+}
+
+.searchbar {
+    width: 100%;
+    padding: 8px;
+    border-radius: 25px;
+    border: 1px solid ;
+}
+
+.searchbar input {
+    font-size: 15px;
+}
+
+.weathercontainer {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+.weathercontainer .countryname{
+      font-size: 15px;
+    }
+
+    .weathercontainer .city{
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .weathercontainer .weatherdescription{
+      font-size: 15px;
+    }
+
+.weatherinfodiv {
+    align-items: center;
+    line-height: 40px;
+}
+
+.temprature {
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.moredetails {flex-direction: column;
+  align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.humiditycont, .Windcont, .Pressurecont, .Feelslikecont {
+    width: 98%;
+    padding: 10px;
+    box-shadow: 2px 2px 1px rgb(56, 189, 248, 0.1);
+}
+}
+
+@media (max-width: 600px) {
+      
+
+      #main {
+        height: auto;
+          padding-top: 30px;
+          padding-left: 10px;
+          padding-right: 10px;
+      }
+      
+      .logo {
+          font-size: 30px;
+      }
+      
+      .p {
+          font-size: 146x;
+          text-align: center;
+      }
+      
+      .searchbar {
+          width: 100%;
+          padding: 8px;
+          border-radius: 25px;
+          border: 1px solid ;
+      }
+      
+      .searchbar input {
+          font-size: 15px;
+      }
+      
+      .weathercontainer {
+          width: 90%;
+          height: auto;
+          padding: 20px;
+          border-radius: 20px;
+          margin-bottom: 100px;
+      }
+      
+      .weathercontainer .countryname{
+            font-size: 15px;
+          }
+      
+          .weathercontainer .city{
+            font-size: 30px;
+            font-weight: 600;
+          }
+      
+          .weathercontainer .weatherdescription{
+            font-size: 15px;
+          }
+      
+      .weatherinfodiv {
+          align-items: center;
+          line-height: 40px;
+      }
+      
+      .temprature {
+          font-size: 40px;
+          font-weight: 400;
+          margin-top: 10px;
+          display: flex;
+          justify-content: center;
+      }
+      
+      .moredetails {flex-direction: column;
+        align-items: center;
+          justify-content: center;
+          gap: 15px;
+          margin-top: 30px;
+      }
+      
+      .humiditycont, .Windcont, .Pressurecont, .Feelslikecont {
+          width: 98%;
+          padding: 10px;
+          box-shadow: 2px 2px 1px rgb(56, 189, 248, 0.1);
+      }
+      }
+
+      @media (min-width: 601px) and (max-width: 800px) {
+    .weathercontainer {
+        width: 500px;
+    }
+}
+
+      
+  </style>
+
+  <div id="main">
+    <div class="logo">
+      <i class="ri-cloud-line"></i>
+      <h6>
+        <span>Weather</span><span class="span2">Update</span>
+      </h6>
+    </div>
+    <h6 class="p">Elegantly simple weather at your fingertips</h6>
+    <div class="searchbar">
+      <button><i class="ri-search-line"></i></button>
+      <input type="text" placeholder="Search for a city..." />
+    </div>
+    <div class="weathercontainer">
+      <div class="weatherinfodiv">
+        <div class="weatherinfo">
+          <p class="countryname">United States</p>
+        <h1 class="city">San Francisco</h1>
+        <p class="weatherdescription">🌤️ Partly-Cloudy</p>
+        </div>
+        <div class="temprature">
+          <h1><span class="temp">18</span><span class="degree">°C</span></h1>
+        </div>
+      </div>
+      <div class="moredetails">
+        <div class="humiditycont">
+          <p style="font-weight: 700;">Humidity</p>
+          <p class="humidity"><span class="humiditydata">72</span><span>%</span></p>
+        </div>
+        <div class="Windcont">
+          <p style="font-weight: 700;">Wind</p>
+          <p class="Wind"><span class="winddata">12</span><span>km/h</span></p>
+        </div>
+        <div class="Pressurecont">
+          <p style="font-weight: 700;">Pressure</p>
+          <p class="pressure"><span class="pressuredata">1013</span><span> hPa</span></p>
+        </div>
+        <div class="Feelslikecont">
+          <p style="font-weight: 700;">Feels Like</p>
+          <p class="feelslike"><span class="feelslikedata">17</span><span>°C</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
+</html>
