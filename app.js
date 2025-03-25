@@ -2,8 +2,6 @@ let input = document.querySelector(".searchbar input");
 let getdata = document.querySelector("button");
 let weathercontainer = document.querySelector(".weathercontainer");
 
-weathercontainer.style.opacity = "0";
-
 function getWeatherEmoji(description) {
   const weatherEmojis = {
     "clear sky": "☀️",
@@ -90,7 +88,7 @@ async function fetchdata(city) {
       }
 
     weathercontainer.style.transition = "opacity 0.5s ease-in-out";
-    weathercontainer.style.opacity = "1";
+    weathercontainer.style.display = "block";
   } catch (error) {
     alert(error.message);
   }
